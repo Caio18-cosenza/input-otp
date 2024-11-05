@@ -24,7 +24,8 @@ export const InputOTP = ({}: InputOTPProps) => {
 
   const handleChangeCode = (code: string, index: number) => {
     codeOTP[index] = code;
-
+    // Verificar a existencia de 1 numero e pular para o proximo
+    // até o final
     if (code.length == 1 && index < inputRefs.length - 1) {
       inputRefs[index + 1].current?.focus();
     }
